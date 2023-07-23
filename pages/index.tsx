@@ -1,108 +1,44 @@
-import { ConnectWallet } from "@thirdweb-dev/react";
-import styles from "../styles/Home.module.css";
+import type { NextPage } from "next";
 import Image from "next/image";
-import { NextPage } from "next";
+import { useRouter } from "next/router";
+import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
+  const router = useRouter();
+
   return (
-    <main className={styles.main}>
-      <div className={styles.container}>
-        <div className={styles.header}>
-          <h1 className={styles.title}>
-            Welcome to{" "}
-            <span className={styles.gradientText0}>
-              <a
-                href="https://thirdweb.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                thirdweb.
-              </a>
-            </span>
-          </h1>
-
-          <p className={styles.description}>
-            Get started by configuring your desired network in{" "}
-            <code className={styles.code}>src/index.js</code>, then modify the{" "}
-            <code className={styles.code}>src/App.js</code> file!
+    <div className={styles.container}>
+      {/* Top Section */}
+      <h1 className={styles.h1}>NFT Staking Contract</h1>
+      <div className={styles.nftBoxGrid}>
+        <div
+          className={styles.optionSelectBox}
+          role="button"
+          onClick={() => router.push(`/mint`)}
+        >
+          {/* Mint a new NFT */}
+          <Image src="/icons/drop.webp" alt="drop" width={64} height={64} />
+          <h2 className={styles.selectBoxTitle}>Mint a new NFT</h2>
+          <p className={styles.selectBoxDescription}>
+            Use the NFT Drop Contract to claim an NFT from the collection.
           </p>
-
-          <div className={styles.connect}>
-            <ConnectWallet
-              dropdownPosition={{
-                side: "bottom",
-                align: "center",
-              }}
-            />
-          </div>
         </div>
 
-        <div className={styles.grid}>
-          <a
-            href="https://portal.thirdweb.com/"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src="/images/portal-preview.png"
-              alt="Placeholder preview of starter"
-              width={300}
-              height={200}
-            />
-            <div className={styles.cardText}>
-              <h2 className={styles.gradientText1}>Portal ➜</h2>
-              <p>
-                Guides, references, and resources that will help you build with
-                thirdweb.
-              </p>
-            </div>
-          </a>
-
-          <a
-            href="https://thirdweb.com/dashboard"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src="/images/dashboard-preview.png"
-              alt="Placeholder preview of starter"
-              width={300}
-              height={200}
-            />
-            <div className={styles.cardText}>
-              <h2 className={styles.gradientText2}>Dashboard ➜</h2>
-              <p>
-                Deploy, configure, and manage your smart contracts from the
-                dashboard.
-              </p>
-            </div>
-          </a>
-
-          <a
-            href="https://thirdweb.com/templates"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src="/images/templates-preview.png"
-              alt="Placeholder preview of templates"
-              width={300}
-              height={200}
-            />
-            <div className={styles.cardText}>
-              <h2 className={styles.gradientText3}>Templates ➜</h2>
-              <p>
-                Discover and clone template projects showcasing thirdweb
-                features.
-              </p>
-            </div>
-          </a>
+        <div
+          className={styles.optionSelectBox}
+          role="button"
+          onClick={() => router.push(`/stake`)}
+        >
+          {/* Staking an NFT */}
+          <Image src="/icons/token.webp" alt="token" width={64} height={64} />
+          <h2 className={styles.selectBoxTitle}>Stake Your NFTs</h2>
+          <p className={styles.selectBoxDescription}>
+            Use the custom staking contract deployed via <b>thirdweb Deploy</b>{" "}
+            to stake your NFTs, and earn tokens from the <b>Token</b> contract.
+          </p>
         </div>
       </div>
-    </main>
+    </div>
   );
 };
 
