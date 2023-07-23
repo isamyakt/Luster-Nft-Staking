@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Madlads #1",
+    "description": "madlad backpack",
+    "image": "./nft1.jpeg",
+    "attributes": [
+      {
+        "trait_type": "Background",
+        "value": "Backpack"
+      },
+      {
+        "trait_type": "Eyeball",
+        "value": "Gold"
+      }
+    ]
+  },
+  {
+    "name": "Madlads #2",
+    "description": "madlad fock it",
+    "image": "./nft2.jpeg",
+    "attributes": [
+      {
+        "trait_type": "Background",
+        "value": "Fire"
+      },
+      {
+        "trait_type": "Eyeball",
+        "value": "Blue"
+      }
+    ]
+  },
+  {
+    "name": "Madlads #3",
+    "description": "madlad real madlads",
+    "image": "./nft3.jpeg",
+    "attributes": [
+      {
+        "trait_type": "Background",
+        "value": "Black"
+      },
+      {
+        "trait_type": "Eyeball",
+        "value": "Red"
+      }
+    ]
+  },
+  {
+    "name": "Madlads #4",
+    "description": "madlad firefly gang",
+    "image": "./nft4.jpeg",
+    "attributes": [
+      {
+        "trait_type": "Background",
+        "value": "Firing"
+      },
+      {
+        "trait_type": "Eyeball",
+        "value": "Green"
+      }
+    ]
+  }
+]
